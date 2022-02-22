@@ -2,6 +2,7 @@
 let currentPokemon;
 let allPokemonNames = [];
 let allPokemons = 1;
+let loading = false;
 // ====================> Global Variables End <==================== \\
 // ============================================================================================================================== \\
 // ====================> Search function WIP <==================== \\
@@ -33,17 +34,21 @@ async function renderPokedex() {
 // ====================> Onscroll fetching more Pokemmons from API <==================== \\
 window.onscroll = async function(){
     if(window.scrollY + window.innerHeight >= document.body.clientHeight) {
-        let a = allPokemons * 20 + 1;
-        let b = allPokemons * 20 + 20;
-        allPokemons++;
-        for (i = a; i < b; i++) {
-            let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-            let response = await fetch(url);
-            currentPokemon = await response.json();  
-            renderPokeCard(i);
-            renderPokemonAbout(i);
-            renderPokemonBaseStats(i);
-            renderPokemonMoves(i);
+        if (!loading) {
+            loading = true;
+            let a = allPokemons * 20 + 1;
+            let b = allPokemons * 20 + 20;
+            allPokemons++;
+            for (i = a; i < b; i++) {
+                let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+                let response = await fetch(url);
+                currentPokemon = await response.json();  
+                renderPokeCard(i);
+                renderPokemonAbout(i);
+                renderPokemonBaseStats(i);
+                renderPokemonMoves(i);
+            }
+            loading = false;
         }
     }
 }
