@@ -1,0 +1,210 @@
+/* ====================> Some Global class <==================== */
+body {
+    display: flex;
+    justify-content: center;
+    background-image: url(img/pokemon-bg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+tr{
+    height: 40px;
+}
+
+td {
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+button {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/* ====================> Some Global class End <==================== */
+/* ============================================================================================================================== */
+/* ====================> PokeCard <==================== */
+.pokeCard {
+    width: 300px;
+    height: 220px;
+    border-radius: 20px;
+}
+
+.pokeCard:hover {
+    cursor: pointer;
+}
+
+.pokemonId {
+    text-align: end;
+    font-weight: 800;
+    font-size: 27px;
+    opacity: 0.4;
+    padding-top: 5px;
+    padding-right: 28px;
+}
+
+.pokemonName {
+    font-weight: 700;
+    padding-left: 20px;
+    font-size: 25px;
+}
+
+.pokemonTypeImg {
+    display: flex;
+    justify-content: space-around;
+}
+
+#pokemonType {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.pokemonImg {
+    height: 120px;
+    width: 120px;
+}
+
+.pokeCardStats {
+    width: 300px;
+    height: 250px !important;
+    border-radius: 20px;
+}
+/* ====================> PokeCard End <==================== */
+/* ============================================================================================================================== */
+/* ====================> Show currentPokeCard Stats <==================== */
+.showPokemon {
+    margin: 20px;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.pokemonStats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 20px;
+    margin-top: -60px;
+}
+
+.pokemonMovesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 300px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.pokemonMoves {
+    border: solid rgba(0, 0, 0, 0.3) 1px;
+    border-radius: 16px;
+    text-align: center;
+    margin: 5px;
+    padding: 0 3px 0 3px;
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pokemonStat {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.stat {
+    text-align: right;
+}
+/* ====================> Show currentPokeCard Stats End <==================== */
+/* ============================================================================================================================== */
+/* ====================> Pokemon Types <==================== */
+.grass {
+    background-color: #80d530;
+}
+
+.fire {
+    background-color: #e73720;
+}
+
+.water {
+    background-color: #8aeaff;
+}
+
+.bug {
+    background-color: #468366;
+}
+
+.normal {
+    background-color: #c3cacd;
+}
+
+.poison {
+    background-color: #947ce9;
+}
+
+.electric {
+    background-color: #ffe100;
+}
+
+.ground {
+    background-color: #dcc200;
+}
+
+.fairy {
+    background-color: rgb(249, 218, 217);
+}
+
+.fighting {
+    background-color: rgb(163, 97, 28);
+}
+
+.psychic {
+    background-color: rgb(238, 132, 140);
+}
+
+.rock {
+    background-color: rgb(136, 135, 128);
+}
+
+.ghost {
+    background-color: rgb(102, 68, 151);
+}
+
+.ice {
+    background-color: rgb(132, 205, 247);
+}
+
+.dragon {
+    background-color: rgb(225, 185, 39);
+}
+
+.dark {
+    background-color: purple;
+}
+
+.steel {
+    background-color: rgb(206, 194, 194);
+}
+
+.flying {
+    background-color: rgb(26, 194, 194);
+}
+/* ====================> Pokemon Types End <==================== */
+/* ============================================================================================================================== */
